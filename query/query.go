@@ -113,6 +113,7 @@ type Entry struct {
 	Expiration time.Time // Entry expiration timestamp if requested and supported (see TTLDatastore).
 	Size       int       // Might be -1 if the datastore doesn't support listing the size with KeysOnly
 	//                   // or if ReturnsSizes is not set
+	Raw interface{}
 }
 
 // Result is a special entry that includes an error, so that the client
